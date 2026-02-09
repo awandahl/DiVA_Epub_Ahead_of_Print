@@ -22,7 +22,7 @@ DIVA_URL = (
     "&sortOrder=title_sort_asc"
     "&sortOrder2=title_sort_asc"
     "&csvType=publication"
-    "&fl=PID,DOI"
+    "&fl=PID,DOI,Year,PartOfThesis"
 )
 
 INPUT_CSV = "dois_input.csv"      # downloaded from Diva
@@ -37,7 +37,7 @@ USER_AGENT = "kth-epub-checker/1.0 (mailto:aw@kth.se)"
 SMTP_HOST = "shared17.arvixe.com"
 SMTP_PORT = 465                  # SSL/TLS
 SMTP_USER = "anders@golonka.se"
-SMTP_PASS = "************"           # <-- your real password
+SMTP_PASS = "***********"           # <-- your real password
 
 FROM_ADDR = "anders@golonka.se"
 TO_ADDRS = [
