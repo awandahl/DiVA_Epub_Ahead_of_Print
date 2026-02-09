@@ -15,17 +15,3 @@ To adapt the script for another institution:
 - Adjust the **input/output filenames** if needed.
 - Configure the **SMTP settings** (server, port, username, password, From, recipient list) to match your local mail environment.
 
-
-## Example cron configuration
-
-To run the script every **Friday at 08:00** and log its output:
-
-```cron
-0 8 * * 5 cd /home/aw/epub_ahead && /home/aw/venv/bin/python check_crossref_epub.py >> /home/aw/epub_ahead/epub_check.log 2>&1
-```
-
-- `0 8 * * 5` – run at 08:00 every Friday.
-- `cd /home/aw/epub_ahead` – ensures the script runs in the project directory (so relative paths like `dois_input.csv` work).
-- `/home/aw/venv/bin/python check_crossref_epub.py` – uses your virtual environment’s Python to run the script.
-- `>> ...epub_check.log 2>&1` – appends both stdout and stderr to `epub_check.log` so you can review what happened during each run.
-
